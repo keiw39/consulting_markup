@@ -1,0 +1,117 @@
+/* desktop-menu
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.l-desktopMenu {
+  display: none;
+  @include res.responsive(lg) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.l-desktopMenu__nav {
+  height: 100%;
+}
+
+.l-desktopMenu__navWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.l-desktopMenu__navList {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.l-desktopMenu__navItem {
+  height: 100%;
+  &:not(:nth-of-type(1)) {
+    margin-left: rem.rem(50);
+  }
+  &:last-of-type {
+    margin-left: 80px;
+  }
+  &.-contact {
+    width: 180px;
+    height: 70px;
+
+    a {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      padding: 23px 0px;
+      color: #fff;
+      background-color: #050505;
+      transition: 0.5s;
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background: #fff;
+        transition: transform 0.3s;
+        transform: scale(0, 1);
+        transform-origin: right top;
+      }
+      &:hover {
+        color: #050505;
+        &::before {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bg {
+  0% {
+    opacity: 0;
+    transform: scaleX(0) translateX(-5%);
+  }
+  30% {
+    transform: scaleX(1) translateX(0);
+  }
+  100% {
+    transform: scaleX(1) translateX(0);
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.l-desktopMenu__navLink {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  font-family: set.$font-family-english;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3c3c3c;
+  text-decoration: none;
+  letter-spacing: 0em;
+}
+
+.bg .bg-wrap .inn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}

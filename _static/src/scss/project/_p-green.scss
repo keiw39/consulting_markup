@@ -1,0 +1,31 @@
+/*
+green-back
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-green-back {
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  background-color: #efefef;
+  &:nth-last-of-type(1) {
+    &::before {
+      top: -1%;
+      height: 101%;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    content: '';
+    background-color: #2cc24f;
+  }
+  @include res.responsive(md) {
+    padding-top: 0;
+  }
+}

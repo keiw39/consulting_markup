@@ -1,0 +1,50 @@
+@charset "UTF-8";
+// Setting
+//
+// 色・サイズ・フォント
+//
+@use "./setting/setting";
+
+// Function
+//
+//変数・ミックスイン・z-index
+//
+@use "./function/rem";
+@use "./function/responsive";
+@use "./function/z-index";
+
+// Foundation
+//
+// ベース系
+//
+@use "./foundation";
+
+// Layout
+//
+// レイアウト
+//
+@use './layout';
+
+// Component
+//
+// 汎用モジュール
+//
+@use "./component";
+
+// Project
+//
+// 専用モジュール
+//
+@use './project';
+
+// Utility
+//
+// 調整
+//
+@use "./utility";
+
+// External
+//
+// 外部ライブラリ上書き用
+//
+@use './external/e-slick';

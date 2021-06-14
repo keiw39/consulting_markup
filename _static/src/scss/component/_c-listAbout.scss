@@ -1,0 +1,26 @@
+/*
+listAbout
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listAbout__imgWrap {
+  display: grid;
+  grid-template-rows: repeat(1, 100%);
+  grid-template-columns: repeat(4, 25%);
+  width: 100vw;
+  padding-top: 94px;
+  margin: 0 calc(50% - 50vw);
+  @include res.lg {
+    width: 92.68vw;
+    margin: 0 calc(50% - 47.7vw);
+  }
+  @include res.responsive(md) {
+    padding-top: 148px;
+  }
+  @include res.responsive(lg) {
+    width: 92.68vw;
+    margin: 0 calc(50% - 47.5vw);
+  }
+}

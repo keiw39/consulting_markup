@@ -1,0 +1,102 @@
+/*
+listMember
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listMember__contentsWrap {
+  padding-top: 24px;
+  @include res.responsive(md) {
+    display: flex;
+  }
+}
+
+.c-listMember__imgWrap {
+  @include res.responsive(md) {
+    width: 43.75%;
+    margin-right: 4.45%;
+  }
+}
+
+.c-listMember__img {
+  height: 101.5vw;
+  object-fit: cover;
+  @include res.responsive(md) {
+    height: 550px;
+  }
+}
+
+.c-listMember__textWrap {
+  position: relative;
+  padding-top: 40px;
+  @include res.responsive(md) {
+    width: 51.8%;
+    padding-top: 0;
+  }
+  @include res.responsive(xl) {
+    width: 51.8%;
+    padding-top: 10px;
+  }
+  .c-listMember__title {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    @include res.responsive(md) {
+      font-size: 14px;
+    }
+  }
+  .c-listMember__name {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    @include res.responsive(md) {
+      margin-bottom: 26px;
+      font-size: 30px;
+    }
+    span {
+      font-size: 12px;
+      @include res.responsive(md) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.c-listMember__modalBtn {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  @include res.responsive(md) {
+    display: none;
+  }
+}
+
+.c-listMember__detail {
+  display: none;
+  @include res.responsive(md) {
+    display: block;
+  }
+}
+
+.c-listMember__detailText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.45;
+  color: #fff;
+  letter-spacing: 0.07em;
+  &:nth-of-type(1) {
+    margin-bottom: 32px;
+  }
+}

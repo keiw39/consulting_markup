@@ -1,0 +1,120 @@
+/*
+listStrength
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listStrength__item {
+  position: relative;
+  &:not(:last-of-type) {
+    margin-bottom: 35px;
+    @include res.responsive(lg) {
+      margin-bottom: 45px;
+    }
+  }
+  &:nth-of-type(1) {
+    &::before {
+      position: absolute;
+      top: 9%;
+      left: -47px;
+      font-family: set.$font-family-english;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      color: #818181;
+      content: 'STRENGTH.01';
+      transform: rotateZ(270deg);
+      @include res.responsive(lg) {
+        top: 6.5%;
+        left: -60px;
+        font-size: 12px;
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    &::before {
+      position: absolute;
+      top: 9%;
+      left: -47px;
+      font-family: set.$font-family-english;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      color: #818181;
+      content: 'STRENGTH.02';
+      transform: rotateZ(270deg);
+      @include res.responsive(lg) {
+        top: 6.5%;
+        left: 40px;
+        font-size: 12px;
+      }
+    }
+    @include res.responsive(lg) {
+      padding-left: rem.rem(100);
+      margin-right: rem.rem(-100);
+    }
+  }
+  &:nth-of-type(3) {
+    &::before {
+      position: absolute;
+      top: 9%;
+      left: -47px;
+      font-family: set.$font-family-english;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+      color: #818181;
+      content: 'STRENGTH.03';
+      transform: rotateZ(270deg);
+      @include res.responsive(lg) {
+        top: 6.5%;
+        left: -60px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.c-listStrength__itemWrap {
+  @include res.responsive(lg) {
+    padding-top: 26px;
+  }
+}
+
+.c-listStrength__imgWrap {
+  margin-right: -7%;
+  margin-bottom: 20px;
+  @include res.responsive(lg) {
+    margin-bottom: 47.5px;
+  }
+}
+
+.c-listStrength__img {
+  @include res.responsive(lg) {
+    width: 100%;
+  }
+}
+
+.c-listStrength__textWrap {
+  @include res.responsive(lg) {
+    width: 93%;
+  }
+  .c-listStrength__itemTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    @include res.responsive(lg) {
+      margin-bottom: 10.5px;
+      font-size: 25px;
+    }
+  }
+  .l-section__text {
+    font-weight: 400;
+    letter-spacing: 0em;
+    @include res.responsive(lg) {
+      font-size: 14px;
+    }
+  }
+}

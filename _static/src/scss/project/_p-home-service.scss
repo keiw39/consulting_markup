@@ -1,0 +1,69 @@
+/*
+home-service
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-service {
+  padding-top: 50px;
+  @include res.responsive(md) {
+    position: relative;
+    padding-top: 150px;
+  }
+  .l-container {
+    max-width: none;
+    padding-right: 0;
+    @include res.responsive(lg) {
+      margin-left: 0;
+    }
+  }
+  .l-contents__wrap {
+    position: relative;
+    padding-top: 96px;
+    padding-bottom: 100px;
+    padding-left: 23px;
+    margin-left: -23px;
+    background-color: #151515;
+    @include res.responsive(lg) {
+      padding-top: rem.rem(150);
+      padding-bottom: rem.rem(230);
+      padding-left: rem.rem(233);
+      margin-left: rem.rem(-133);
+    }
+  }
+  .l-section__headingWrap {
+    margin-bottom: 24px;
+    color: #fff;
+    &::before {
+      position: absolute;
+      top: -65%;
+      left: -3.5%;
+      font-family: set.$font-family-english;
+      font-size: 57px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.02em;
+      content: 'SERVICE';
+      opacity: 0.2;
+      @include res.responsive(lg) {
+        top: -100%;
+        left: -2.5%;
+        font-size: 93px;
+      }
+    }
+    @include res.responsive(lg) {
+      margin-bottom: rem.rem(44);
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    content: '';
+    background-color: #efefef;
+    opacity: 1;
+  }
+}

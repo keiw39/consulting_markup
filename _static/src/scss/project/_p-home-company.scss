@@ -1,0 +1,39 @@
+/*
+home-company
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-company {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #efefef;
+  @include res.responsive(lg) {
+    padding-top: 104px;
+  }
+  .l-contents__wrap {
+    @include res.responsive(lg) {
+      padding-left: rem.rem(100);
+    }
+  }
+  .l-section__headingWrap {
+    margin-bottom: 28px;
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+  }
+  &::before {
+    top: 4%;
+    left: 3%;
+    content: 'COMPANY';
+    @include res.responsive(lg) {
+      top: 6%;
+      left: 15%;
+    }
+  }
+  .l-container {
+    max-width: unset;
+    margin: 0;
+  }
+}

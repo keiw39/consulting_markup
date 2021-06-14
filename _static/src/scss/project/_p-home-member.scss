@@ -1,0 +1,33 @@
+/*
+home-member
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-member {
+  padding-top: 50px;
+  padding-bottom: 108px;
+  background-color: #151515;
+  @include res.responsive(lg) {
+    padding-top: 100px;
+    padding-bottom: 154px;
+  }
+  .l-contents__wrap {
+    @include res.responsive(lg) {
+      padding-left: rem.rem(100);
+    }
+  }
+  .l-section__headingWrap {
+    color: #fff;
+    .l-section__titleEnglish {
+      margin-bottom: 10px;
+    }
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      max-width: unset;
+      margin: 0;
+    }
+  }
+}

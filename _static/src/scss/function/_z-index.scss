@@ -1,0 +1,60 @@
+/* z-index
+----------------------------------------- */
+//必要になる要素の洗い出し
+$elementes: (
+  c-listPrice__item,
+  c-listPrice__item-02,
+  l-spMenu,
+  l-header,
+  c-modal,
+  p-loading__bg,
+  p-loading,
+  p-cursor__follower,
+  p-cursor
+);
+
+//index関数で呼び出し
+@function z-index($name) {
+  @return index($elementes, $name);
+}
+
+//呼び出し
+.c-listPrice__item {
+  z-index: z-index(c-listPrice__item); //1
+}
+
+.c-listPrice__item:nth-of-type(2) {
+  z-index: z-index(c-listPrice__item-02); //2
+}
+
+.l-spMenu {
+  z-index: z-index(l-spMenu); //3
+}
+
+.l-header {
+  z-index: z-index(l-header); //4
+}
+
+.c-modal {
+  z-index: z-index(c-modal); //5
+}
+
+body {
+  &.appear {
+    .p-loading__bg {
+      z-index: z-index(p-loading__bg); //6
+    }
+  }
+}
+
+#p-loading {
+  z-index: z-index(p-loading); //7
+}
+
+.p-cursor__follower {
+  z-index: z-index(p-cursor__follower); //8
+}
+
+.p-cursor {
+  z-index: z-index(p-cursor); //9
+}

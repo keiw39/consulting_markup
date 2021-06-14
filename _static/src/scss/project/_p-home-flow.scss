@@ -1,0 +1,60 @@
+/*
+home-flow
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-flow {
+  position: relative;
+  padding-top: 74px;
+  padding-bottom: 50px;
+  background-color: #efefef;
+  @include res.responsive(lg) {
+    padding-top: rem.rem(136);
+  }
+  .l-contents__wrap {
+    margin-right: -23px;
+    @include res.responsive(lg) {
+      padding-left: rem.rem(133);
+      margin-right: 0;
+      margin-right: rem.rem(-100);
+    }
+    &::before {
+      position: absolute;
+      bottom: -1%;
+      left: 0;
+      width: 100%;
+      height: 69.5%;
+      content: '';
+      background-color: #151515;
+      @include res.responsive(lg) {
+        bottom: -32%;
+      }
+    }
+  }
+  .l-section__titleEnglish {
+    @include res.responsive(lg) {
+      margin-bottom: rem.rem(8);
+    }
+  }
+  &::before {
+    top: 5%;
+    left: 3%;
+    content: 'FLOW';
+    @include res.responsive(lg) {
+      top: 11%;
+      left: 15%;
+    }
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      max-width: unset;
+      padding-left: rem.rem(100);
+      margin: 0;
+    }
+  }
+}

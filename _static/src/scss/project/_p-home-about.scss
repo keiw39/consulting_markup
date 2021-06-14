@@ -1,0 +1,57 @@
+/*
+home-about
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-about {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  &::before {
+    top: 11.5%;
+    left: 3%;
+    content: 'WHO WE ARE';
+    @include res.responsive(lg) {
+      top: -5%;
+      left: 15%;
+    }
+  }
+  .l-contents__wrap {
+    @include res.responsive(lg) {
+      padding-top: 10px;
+    }
+    .l-section__text {
+      @include res.responsive(lg) {
+        width: 86%;
+      }
+    }
+  }
+  .l-section__headingWrap {
+    @include res.responsive(lg) {
+      margin-bottom: 40px;
+    }
+  }
+  .l-section__titleEnglish {
+    color: #000;
+    @include res.responsive(lg) {
+      margin-bottom: 10px;
+    }
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+  }
+  @include res.responsive(lg) {
+    padding-top: 0;
+    padding-left: 7.32%;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 7.32%;
+      height: 101%;
+      content: '';
+      background-color: #efefef;
+    }
+  }
+}

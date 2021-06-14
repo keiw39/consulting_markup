@@ -1,0 +1,51 @@
+/*
+cursor
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+body {
+  @include res.responsive(xl) {
+    position: relative;
+    //もともとあるカーソルは見えなくなるようにする
+  }
+}
+
+.p-cursor,
+.p-cursor__follower {
+  @include res.responsive(xl) {
+    position: absolute; //bodyの一番左上になるように配置する
+    top: 0;
+    left: 0;
+    pointer-events: none; //他の要素がクリックできなくならないように
+    cursor: none; //もともとあるカーソルは見えなくなるようにする
+    border-radius: 50%;
+  }
+}
+
+.p-cursor {
+  @include res.responsive(xl) {
+    //どの要素よりも一番上になるようにする
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    &.is-active {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+
+.p-cursor__follower {
+  &.is-active {
+    @include res.responsive(xl) {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      mix-blend-mode: difference;
+      transform: scale(3);
+    }
+  }
+}

@@ -1,0 +1,121 @@
+/* =====================================================
+slick.js上書き用
+===================================================== */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__slider {
+  .slick-slide {
+    height: 665px !important;
+    @include res.responsive(lg) {
+      height: 770px !important;
+    }
+  }
+}
+
+.e-slick01 {
+  .slick-dots {
+    position: absolute;
+    bottom: 3.3%;
+    left: 45.5%;
+    transform: rotateZ(90deg);
+    li {
+      width: 10px;
+      height: 10px;
+      button {
+        &::before {
+          width: 10px;
+          height: 10px;
+          content: '';
+          background-color: #e8e8e8;
+          border: 1px solid #6f6f6f;
+          border-radius: 50%;
+          opacity: 1;
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            background-color: #6f6f6f;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @include res.responsive(lg) {
+      bottom: 47%;
+      left: -54%;
+    }
+  }
+}
+
+.e-slick02 {
+  &.slick-initialized .slick-slide {
+    width: rem.rem(300);
+    @include res.responsive(lg) {
+      width: rem.rem(388);
+    }
+  }
+  @include res.responsive(lg) {
+    margin-left: 0;
+  }
+  &::before {
+    position: absolute;
+    top: -46%;
+    right: 0;
+    width: 23px;
+    height: 100%;
+    height: rem.rem(650);
+    content: '';
+    background-color: #2cc24f;
+    @include res.responsive(lg) {
+      top: -52%;
+      right: -1%;
+      width: 21.5%;
+      height: rem.rem(970);
+    }
+  }
+  .slick-prev {
+    top: 111%;
+    left: 65%;
+    width: 18px;
+    height: 30px;
+    &::before {
+      display: block;
+      width: 18px;
+      height: 30px;
+      content: '';
+      background-image: url(../img/c-listService_prev_arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      opacity: 1;
+    }
+    @include res.responsive(lg) {
+      top: 113%;
+      left: 63%;
+    }
+  }
+  .slick-next {
+    top: 111%;
+    right: 12%;
+    width: 18px;
+    height: 30px;
+    &::before {
+      display: block;
+      width: 18px;
+      height: 30px;
+      content: '';
+      background-image: url(../img/c-listService_next_arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      opacity: 1;
+    }
+    @include res.responsive(lg) {
+      top: 113%;
+      right: 28%;
+    }
+  }
+}

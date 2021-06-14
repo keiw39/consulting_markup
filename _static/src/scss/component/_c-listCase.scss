@@ -1,0 +1,64 @@
+/*
+listCase
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listCase__scrollSlider {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  @include res.responsive(lg) {
+    margin-left: rem.rem(-133);
+  }
+}
+
+.c-listCase__imgWrap {
+  .c-listCase__scrollImg {
+    width: 75px;
+    margin: 0 auto;
+    @include res.responsive(lg) {
+      width: 120px;
+    }
+  }
+}
+
+.c-listCase__earnings {
+  position: absolute;
+  top: 40%;
+  right: 4.5%;
+  display: inline-flex;
+  align-items: baseline;
+  font-family: set.$font-family-english;
+  font-size: 116px;
+  font-weight: 600;
+  color: #2cc24f;
+  @include res.responsive(lg) {
+    top: 19%;
+    right: 6%;
+    font-size: rem.rem(265);
+  }
+  span {
+    font-size: 56px;
+    @include res.responsive(lg) {
+      font-size: 120px;
+    }
+  }
+}
+
+.c-listCase__scrollWrap {
+  position: relative;
+}
+
+.c-listCase__text {
+  position: absolute;
+  left: 22%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #343434;
+  letter-spacing: 0.04em;
+  @include res.responsive(lg) {
+    bottom: 16.5%;
+    left: 34%;
+  }
+}

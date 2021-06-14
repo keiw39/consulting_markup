@@ -1,0 +1,43 @@
+/*
+home-contact
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-contact {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-color: #efefef;
+  @include res.responsive(lg) {
+    padding-top: 100px;
+    padding-bottom: rem.rem(545);
+  }
+  .l-contents__wrap {
+    @include res.responsive(lg) {
+      padding-left: rem.rem(100);
+    }
+  }
+  .l-section__headingWrap {
+    margin-bottom: 40px;
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+  }
+  &::before {
+    top: 5%;
+    left: 3%;
+    content: 'CONTACT';
+    @include res.responsive(lg) {
+      top: 3%;
+      left: 15%;
+    }
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      padding-right: 0;
+      margin: 0;
+      margin-right: rem.rem(100);
+    }
+  }
+}

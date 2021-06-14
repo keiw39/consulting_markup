@@ -1,0 +1,42 @@
+/*
+home-faq
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-faq {
+  padding-top: 100px;
+  background-color: #efefef;
+  .l-contents__wrap {
+    @include res.responsive(lg) {
+      padding-top: rem.rem(50);
+      padding-left: rem.rem(133);
+    }
+  }
+  .l-section__headingWrap {
+    margin-bottom: 40px;
+    @include res.responsive(lg) {
+      margin-bottom: 50px;
+    }
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+  }
+  &::before {
+    top: 64px;
+    left: 3%;
+    content: 'FAQ';
+    @include res.responsive(lg) {
+      top: 100px;
+      left: 15%;
+    }
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      max-width: unset;
+      padding-left: rem.rem(100);
+      margin: 0;
+    }
+  }
+}

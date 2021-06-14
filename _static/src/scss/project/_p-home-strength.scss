@@ -1,0 +1,67 @@
+/*
+home-strength
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-strength {
+  position: relative;
+  padding-bottom: 94px;
+  @include res.responsive(lg) {
+    padding-top: 105px;
+    padding-bottom: 140px;
+  }
+  .l-container {
+    padding-right: 0;
+    padding-left: 0;
+    @include res.responsive(lg) {
+      max-width: unset;
+      margin: 0;
+      padding-right: rem.rem(100);
+      padding-left: rem.rem(133);
+    }
+  }
+
+  .l-section__headingWrap {
+    margin-bottom: 20px;
+    .l-section__titleText {
+      margin-bottom: 0;
+      color: set.$color-accent;
+    }
+  }
+  .l-contents__wrap {
+    padding-right: 5.5556%;
+    padding-left: 5.5556%;
+    @include res.responsive(lg) {
+      padding-left: rem.rem(100);
+    }
+    &::before {
+      position: absolute;
+      top: -2.4%;
+      left: 2%;
+      font-family: set.$font-family-english;
+      font-size: 57px;
+      font-weight: 600;
+      color: #000;
+      letter-spacing: 0.02em;
+      content: 'STRENGTH';
+      opacity: 0.05;
+      @include res.responsive(lg) {
+        top: 1.6%;
+        left: 15%;
+        font-size: 93px;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    content: '';
+    background-color: #efefef;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,130 @@
+/*
+listService
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listService__sliderItem {
+  position: relative;
+  height: 370px;
+  padding: 45.5px 42px 45.5px 42px;
+  margin-right: 40px;
+  background-color: #fff;
+  @include res.responsive(lg) {
+    padding: 55px 50px 60px;
+    height: 480px;
+  }
+  &.-one {
+    &::before {
+      position: absolute;
+      top: -2%;
+      left: 60%;
+      font-family: set.$font-family-english;
+      font-size: 93px;
+      font-weight: 600;
+      color: #000;
+      content: '01';
+      opacity: 0.05;
+      @include res.responsive(lg) {
+        font-size: 120px;
+      }
+    }
+  }
+  &.-two {
+    &::before {
+      position: absolute;
+      top: -2%;
+      left: 60%;
+      font-family: set.$font-family-english;
+      font-size: 93px;
+      font-weight: 600;
+      color: #000;
+      content: '02';
+      opacity: 0.05;
+      @include res.responsive(lg) {
+        font-size: 120px;
+      }
+    }
+  }
+  &.-three {
+    &::before {
+      position: absolute;
+      top: -2%;
+      left: 60%;
+      font-family: set.$font-family-english;
+      font-size: 93px;
+      font-weight: 600;
+      color: #000;
+      content: '03';
+      opacity: 0.05;
+      @include res.responsive(lg) {
+        font-size: 120px;
+      }
+    }
+  }
+  &.-four {
+    &::before {
+      position: absolute;
+      top: -2%;
+      left: 60%;
+      font-family: set.$font-family-english;
+      font-size: 93px;
+      font-weight: 600;
+      color: #000;
+      content: '04';
+      opacity: 0.05;
+      @include res.responsive(lg) {
+        font-size: 120px;
+      }
+    }
+  }
+}
+
+.c-listService__sliderLink {
+  display: block;
+  text-decoration: none;
+}
+
+.c-listService__sliderTitle {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+  @include res.responsive(lg) {
+    font-size: 28px;
+  }
+}
+
+.c-listService__slider__img {
+  width: 158px;
+  margin: 0 auto;
+  @include res.responsive(lg) {
+    width: 204px;
+  }
+}
+
+.c-listService__slider__textWrap {
+  padding-left: 36px;
+  @include res.responsive(lg) {
+    padding-left: 56px;
+    margin-top: -10px;
+  }
+}
+
+.c-listService__slider__text {
+  position: relative;
+  font-size: 11px;
+  line-height: 1.9;
+  @include res.responsive(lg) {
+    font-size: 16px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: -18%;
+    width: 13%;
+    height: 1px;
+    content: '';
+    background-color: #191919;
+  }
+}

@@ -1,0 +1,35 @@
+/* slick
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-slick__number {
+  position: absolute;
+  right: 3.5%;
+  bottom: 40%;
+  display: none;
+  @include res.lg {
+    bottom: 50%;
+    display: block;
+  }
+  @include res.responsive(xl) {
+    bottom: 40%;
+    display: block;
+  }
+}
+
+.p-slick__numberInner {
+  position: absolute;
+}
+
+.p-slick__number__now-count {
+  font-family: set.$font-family-english;
+  font-size: 14px;
+}
+
+.p-slick__number__all-count {
+  margin-top: 45px;
+  font-family: set.$font-family-english;
+  font-size: 14px;
+}

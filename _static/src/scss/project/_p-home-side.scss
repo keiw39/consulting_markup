@@ -1,0 +1,37 @@
+/* home-side
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__side {
+  display: none;
+  @include res.responsive(lg) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 7.32%;
+    padding: 28px 23px;
+    background-color: #fff;
+  }
+}
+
+.p-home__side__socialWrap {
+  position: absolute;
+  bottom: 44px;
+}
+
+.p-home__side__socialItem {
+  line-height: 1;
+  text-align: center;
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
+
+.p-home__side__socialLink {
+  display: block;
+  i {
+    font-size: 20px;
+  }
+}

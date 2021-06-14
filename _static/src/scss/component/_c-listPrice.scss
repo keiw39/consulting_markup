@@ -1,0 +1,298 @@
+/*
+listPrice
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listPrice__itemList {
+  position: relative;
+}
+
+.c-listPrice__supportList {
+  @include res.responsive(lg) {
+    width: 63.15%;
+  }
+}
+
+.c-listPrice__item {
+  padding: 13px 5px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  @include res.lg {
+    padding-top: rem.rem(42);
+    padding-bottom: rem.rem(52);
+    padding-left: rem.rem(20);
+  }
+  @include res.responsive(xl) {
+    padding-top: rem.rem(42);
+    padding-bottom: rem.rem(52);
+    padding-left: rem.rem(48);
+  }
+  &:not(:nth-of-type(2)) {
+    width: 42%;
+  }
+  &:nth-of-type(2) {
+    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    top: -5%;
+    left: 50%;
+    width: 38.5%;
+    padding-top: 24px;
+    padding-bottom: 30px;
+    transform: translate(-50%, 0%);
+    .c-listPrice__priceType {
+      padding-left: 0;
+      text-align: center;
+    }
+    .c-listPrice__priceMain {
+      padding-left: 0;
+      text-align: center;
+    }
+    .c-listPrice__priceSub {
+      padding-left: 0;
+      text-align: center;
+    }
+    .c-listPrice__supportList {
+      padding-left: 10.5%;
+      @include res.lg {
+        width: 80%;
+        padding-left: 0;
+        margin: 0 auto;
+      }
+      @include res.responsive(xl) {
+        width: 63.5%;
+        padding-left: 0;
+        margin: 0 auto;
+      }
+    }
+    .c-listPrice__support {
+      position: relative;
+      @include res.responsive(lg) {
+        justify-content: flex-start;
+      }
+      .c-listPrice__supportCheck {
+        position: absolute;
+        @include res.responsive(lg) {
+          position: unset;
+        }
+      }
+      span {
+        transform-origin: unset;
+      }
+      &::before {
+        left: 5%;
+        @include res.responsive(lg) {
+          display: none;
+        }
+      }
+    }
+    .c-btn {
+      margin: 0 auto;
+      margin-top: 11px;
+      @include res.responsive(lg) {
+        margin-top: 30px;
+      }
+    }
+    @include res.responsive(lg) {
+      top: -7%;
+      width: 36.65%;
+      padding-top: rem.rem(74);
+      padding-right: 0;
+      padding-bottom: rem.rem(85);
+      padding-left: 0;
+    }
+  }
+  &:nth-of-type(3) {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    .c-listPrice__priceType {
+      padding-left: 30%;
+      @include res.lg {
+        padding-left: rem.rem(100);
+      }
+      @include res.responsive(xl) {
+        padding-left: rem.rem(130);
+      }
+    }
+    .c-listPrice__priceMain {
+      padding-left: 34%;
+      @include res.lg {
+        padding-left: rem.rem(95);
+      }
+      @include res.responsive(xl) {
+        padding-left: rem.rem(124);
+      }
+    }
+    .c-listPrice__priceSub {
+      padding-left: 60px;
+      @include res.responsive(lg) {
+        padding-left: rem.rem(130);
+      }
+      @include res.responsive(xl) {
+        padding-left: rem.rem(164);
+      }
+    }
+    .c-listPrice__supportList {
+      padding-left: 4%;
+      @include res.responsive(lg) {
+        padding-left: 0;
+        margin-left: rem.rem(38);
+      }
+    }
+    .c-listPrice__support {
+      position: relative;
+      left: 22%;
+      .c-listPrice__supportCheck {
+        position: absolute;
+        @include res.responsive(lg) {
+          position: unset;
+        }
+      }
+      span {
+        transform-origin: unset;
+      }
+      &::before {
+        left: 5%;
+      }
+    }
+    .c-btn {
+      margin: 0 auto;
+      margin-top: 11px;
+      margin-left: 30%;
+      @include res.lg {
+        margin-top: 30px;
+        margin-left: rem.rem(60);
+      }
+      @include res.responsive(xl) {
+        margin-top: 30px;
+        margin-left: rem.rem(94);
+      }
+    }
+  }
+}
+
+.c-listPrice__support {
+  &.-not-applicable {
+    img,
+    span {
+      opacity: 0.2;
+    }
+  }
+}
+
+.c-listPrice__itemWrap {
+  padding-top: 25px;
+  max-width: 452px;
+  margin: 0 auto;
+  @include res.responsive(lg) {
+    padding-top: rem.rem(70);
+    max-width: unset;
+  }
+}
+
+.c-listPrice__priceType {
+  padding-left: 40px;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  @include res.responsive(lg) {
+    padding-left: rem.rem(90);
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.c-listPrice__priceMain {
+  padding-left: 12px;
+  margin-bottom: 1px;
+  font-family: set.$font-family-base;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  @include res.responsive(lg) {
+    padding-left: rem.rem(28);
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  span {
+    font-family: set.$font-family-english;
+    font-size: 20px;
+    font-weight: 600;
+    color: set.$color-accent;
+    @include res.responsive(lg) {
+      font-size: 44px;
+    }
+  }
+}
+
+.c-listPrice__priceSub {
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 3.2;
+  line-height: 1;
+  @include res.responsive(lg) {
+    padding-left: rem.rem(70);
+    margin-bottom: 36px;
+    font-size: 14px;
+  }
+}
+
+.c-listPrice__support {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 4px;
+  @include res.responsive(lg) {
+    padding-bottom: 15.5px;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 6px;
+    @include res.responsive(lg) {
+      margin-bottom: 15.5px;
+    }
+  }
+  span {
+    display: block;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+    @include res.responsive(lg) {
+      font-size: 16px;
+      transform: scale(1);
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    width: 100px;
+    height: 1px;
+    content: '';
+    background-color: #d1d1d1;
+    @include res.responsive(lg) {
+      display: none;
+    }
+  }
+}
+
+.c-listPrice__supportCheck {
+  width: 7.87px;
+  height: 7.87px;
+  margin-right: 1.5px;
+  @include res.responsive(lg) {
+    width: 19.64px;
+    height: 19.64px;
+    margin-right: rem.rem(8.5);
+  }
+}

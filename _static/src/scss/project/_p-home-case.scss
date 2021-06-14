@@ -1,0 +1,53 @@
+/*
+home-case
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.p-home__sec-case {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  @include res.responsive(lg) {
+    padding-bottom: 180px;
+  }
+  &::before {
+    top: 11.5%;
+    left: 3%;
+    content: 'CASE';
+    @include res.responsive(lg) {
+      top: 14%;
+      left: 15%;
+    }
+  }
+  .l-container {
+    @include res.responsive(lg) {
+      margin: 0;
+    }
+  }
+  .l-section__titleText {
+    color: set.$color-accent;
+    @include res.responsive(lg) {
+      margin-bottom: 30px;
+    }
+  }
+  .l-contents__wrap {
+    position: relative;
+    padding-bottom: 140px;
+    @include res.responsive(lg) {
+      padding-top: rem.rem(55);
+      padding-bottom: rem.rem(184);
+      padding-left: rem.rem(100);
+    }
+    .l-section__titleEnglish {
+      @include res.responsive(lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .l-section__text {
+    @include res.responsive(lg) {
+      width: 64%;
+    }
+  }
+}

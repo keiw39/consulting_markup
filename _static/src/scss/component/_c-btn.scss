@@ -1,0 +1,93 @@
+/* =====================================================
+  Component
+===================================================== */
+/* btn
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+
+.c-btn {
+  &.-price {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    margin: 0 0 0 auto;
+    margin: 0 auto;
+    margin-top: 11px;
+    margin-left: 4px;
+    font-family: set.$font-family-english;
+    font-size: 6px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2cc24f;
+    border: 1px solid #2cc24f;
+    transition: 0.5s;
+    @include res.responsive(lg) {
+      width: 240px;
+      height: 50px;
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    span {
+      transform: scale(0.6);
+      @include res.responsive(lg) {
+        transform: scale(1);
+      }
+    }
+    &:hover {
+      color: #2cc24f;
+      background-color: #fff;
+    }
+  }
+  &.-submit {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    text-decoration: none;
+    @include res.responsive(lg) {
+      padding-left: 23%;
+      margin-top: 40px;
+    }
+    input {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      margin: 0 auto;
+      font-family: set.$font-family-english;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      cursor: pointer;
+      background-color: #049e28;
+      border: 1px solid #049e28;
+      transition: 0.5s;
+      @include res.responsive(lg) {
+        width: 668px;
+        height: 107px;
+        margin: 0;
+        font-size: 25px;
+      }
+      span {
+        transform: scale(0.6);
+      }
+      &:hover {
+        color: #049e28;
+        background-color: #fff;
+      }
+    }
+  }
+}

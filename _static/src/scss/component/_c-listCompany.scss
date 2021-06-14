@@ -1,0 +1,64 @@
+/*
+listCompany
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.c-listCompany__contentsWrap {
+  margin-left: -23px;
+  @include res.responsive(lg) {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    margin-left: rem.rem(-233);
+  }
+}
+
+.c-listCompany__imgWrap {
+  margin-bottom: 30px;
+  @include res.responsive(lg) {
+    width: 54%;
+    margin-right: 4.74%;
+    margin-bottom: 0;
+  }
+}
+
+.c-listCompany__detailWrap {
+  padding-right: 15px;
+  padding-left: 23px;
+  @include res.responsive(lg) {
+    width: 41.26%;
+    padding: 0;
+  }
+}
+
+.c-listCompany__detailTable {
+  border: none;
+}
+
+.c-listCompany__detailTh {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+
+.c-listCompany__detailTd {
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 21px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  a {
+    text-decoration: none;
+    @include res.responsive(lg) {
+      pointer-events: none;
+    }
+  }
+}

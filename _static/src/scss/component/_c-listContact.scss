@@ -1,0 +1,92 @@
+/*
+listContact
+----------------------------------------- */
+@use "../setting/setting" as set;
+@use "../function/responsive" as res;
+@use "../function/rem";
+
+.l-form__item {
+  @include res.responsive(lg) {
+    display: flex;
+    align-items: center;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  &:last-of-type {
+    @include res.responsive(lg) {
+      align-items: flex-start;
+    }
+    .l-form__itemTitle {
+      @include res.responsive(lg) {
+        margin-top: 2%;
+      }
+    }
+  }
+}
+
+.l-form__itemTitle {
+  position: relative;
+  display: flex;
+  align-content: center;
+  padding-left: 60px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  @include res.responsive(lg) {
+    width: 21%;
+    margin-right: 1.8%;
+    margin-bottom: 0;
+  }
+  &.-mandatory {
+    &::before {
+      position: absolute;
+      left: 0%;
+      padding: 7.5px 6px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      color: #808080;
+      letter-spacing: 0.12em;
+      content: '必須';
+      border: 1px solid #808080;
+    }
+  }
+}
+
+.l-form__itemDetail {
+  @include res.responsive(lg) {
+    width: 76.4%;
+  }
+  input {
+    width: 100%;
+    padding: 30px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    border: 1px solid #333333;
+    @include res.responsive(lg) {
+      width: 87.5%;
+      padding: 26px 20px;
+      font-size: 19px;
+    }
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 28px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    @include res.responsive(lg) {
+      height: 325px;
+      font-size: 19px;
+    }
+  }
+  &:not(:last-of-type) {
+    @include res.responsive(lg) {
+      height: 75px;
+    }
+  }
+}
