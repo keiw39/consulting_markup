@@ -139,7 +139,7 @@ $(window).scroll(function () {
     $('.l-header').css('box-shadow', 'none');
   }
 
-  if (window.matchMedia('(max-width: 1024px)').matches) {
+  if (window.matchMedia('(max-width: 1023px)').matches) {
     /* ウィンドウサイズが 1024px以下の場合のコードをここに */
     $('#js-header__logoWrap__fixed').css('display', 'none');
     $('.l-header').css('top', '0%');
