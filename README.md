@@ -2,7 +2,7 @@
 「コンサルティング会社」静的ページのマークアップ
 
 ## 実装したサイト
-- [AWESOME COSME](https://works03.k-watanabe39.com/)
+- [Bold Consulting Service.](https://works04.k-watanabe39.com/)
 
 BASIC認証をかけてます。
 
