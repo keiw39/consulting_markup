@@ -41,11 +41,11 @@ body {
 .p-cursor__follower {
   &.is-active {
     @include res.responsive(xl) {
-      width: 16px;
-      height: 16px;
+      width: 60px;
+      height: 60px;
       background-color: #fff;
       mix-blend-mode: difference;
-      transform: scale(3);
+      // transform: scale(1);
     }
   }
 }

@@ -1,16 +1,16 @@
 // マウスカーソル
 var cursor = $('.p-cursor'),
   follower = $('.p-cursor__follower'),
-  cWidth = 6, //カーソルの大きさ
-  fWidth = 40, //フォロワーの大きさ
-  delay = 10, //数字を大きくするとフォロワーがより遅れて来る
+  cWidth = 8, //カーソルの大きさ
+  fWidth = 60, //フォロワーの大きさ
+  delay = 5, //数字を大きくするとフォロワーがより遅れて来る
   mouseX = 0, //マウスのX座標
   mouseY = 0, //マウスのY座標
   posX = 0, //フォロワーのX座標
   posY = 0; //フォロワーのX座標
 
 //カーソルの遅延アニメーション
-//ほんの少ーーーしだけ遅延させる 0.001秒
+//ほんの少しだけ遅延させる 0.001秒
 TweenMax.to({}, 0.001, {
   repeat: -1,
   onRepeat: function () {
