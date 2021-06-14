@@ -1,4 +1,4 @@
-# cosme_markup
+# consulting_markup
 「コンサルティング会社」静的ページのマークアップ
 
 ## 実装したサイト
