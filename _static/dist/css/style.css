@@ -792,11 +792,10 @@ Foundation
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   /* right0から320px移動した位置 */
+  padding-bottom: 120px;
 }
 .l-spMenu .l-container {
-  position: relative;
   padding-top: 120px;
-  padding-bottom: 120px;
   padding-left: 46px;
 }
 .l-spMenu.is-active {
