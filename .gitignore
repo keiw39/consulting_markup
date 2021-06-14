@@ -6,7 +6,6 @@
 # Node artifact files
 package-lock.json
 node_modules/
-_static/dist/
 .stylelintrc.json
 03_lpデザインカンプ/
 .vscode/settings.json
