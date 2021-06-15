@@ -1,5 +1,8 @@
 # consulting_markup
-「コンサルティング会社」静的ページのマークアップ
+- 「コンサルティング会社」静的ページのマークアップ
+- TOPページ
+
+※XDデザインカンプからのコーディング
 
 ## 実装したサイト
 - [Bold Consulting Service.](https://works04.k-watanabe39.com/)
